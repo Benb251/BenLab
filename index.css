@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-snow {
+    /* Hard stop gradient for accumulation effect */
+    background-image: linear-gradient(180deg,
+            #ffffff 0%,
+            #ffffff 48%,
+            currentColor 48%,
+            currentColor 100%);
+
+    /* Clip background to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Make fill transparent but keep color for currentColor reference */
+    -webkit-text-fill-color: transparent;
+    color: inherit;
+    /* Ensure it takes the parent/defined color */
+
+    /* Crisp shadow instead of blur */
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+
+    /* Ensure it sits on top */
+    position: relative;
+    z-index: 10;
+}
+
+@layer base {
+    .glass-panel {
+        @apply bg-zinc-900/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0, 0, 0, 0.37)];
+    }
+}
+
+@layer utilities {
+    .text-shadow-glow {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+}

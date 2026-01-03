@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BenLab: The Noir Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@300;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        background-color: #050505;
+        color: #EAEAEA;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      /* Cyberpunk Animations */
+      @keyframes liquid-flow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      .animate-liquid {
+        background-size: 200% auto;
+        animation: liquid-flow 5s linear infinite;
+      }
+
+      @keyframes faulty-flicker {
+        0% { opacity: 1; }
+        2% { opacity: 1; }
+        4% { opacity: 0.1; }
+        6% { opacity: 1; }
+        8% { opacity: 1; }
+        10% { opacity: 0.1; }
+        11% { opacity: 1; }
+        12% { opacity: 1; }
+        60% { opacity: 1; }
+        61% { opacity: 0.3; }
+        62% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+
+      .animate-flicker {
+        animation: faulty-flicker 4s infinite;
+      }
+
+      @keyframes nebula-drift {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(-10px, -20px); }
+        100% { transform: translate(0, 0); }
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
