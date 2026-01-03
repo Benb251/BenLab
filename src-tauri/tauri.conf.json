@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "benlab-the-noir",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.benlab.studio",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5215",
